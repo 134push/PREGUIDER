@@ -16,7 +16,6 @@ elif size == "large":
 else:
     print("invalid input for size")
     exit()
-    return 0
     
 if extra_cheese == "yes":
     total_bill += 2

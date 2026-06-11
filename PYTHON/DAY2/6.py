@@ -1,4 +1,4 @@
-## find trseure 
+## find trseure small practice progrme
 0
 print("""
 🏝️ TREASURE ISLAND MAP 🏝️
@@ -21,20 +21,32 @@ Legend:
 💰 = Treasure
 """)
 
-print("Welcome to Treasure Island!")
-print("Your mission is to find the treasure.")
+print("welcome to the treasure island")
+print("your mission is to find the treasure")
 
-choice1 = input("You're at a crossroad. Where do you want to go? Type 'left' or 'right': ").lower()
-
+choice1 = input("you are at a cross road, where do you want to go? (left/right) ")
 if choice1 == "right":
-        print("You've chosen the right path.")
-else:
-        print("You've chosen the left path.")
-        choice2 = input("You've come to a lake. There is an island in the middle of the lake. Type 'wait' to wait for a boat or 'swim' to swim across: ").lower()
-        if choice2 == "wait":
-                print("You waited for a boat and safely reached the island.")
-                choice3 = input("You see three doors: one red, one yellow, and one blue. Which door do you choose? ").lower()
-                if choice3 == "yellow":
-                        print("Congratulations! You found the treasure! 🏆")
-                elif choice3 == "red":
-                        print("It's a trap! You were burned by fire. Game Over. 🔥")
+        print("you fell into a hole. game over.")
+        exit()
+
+elif choice1 == "left":
+        choice2 = input("you come to a lake. there is an island in the middle of the lake. do you want to wait for a boat or swim across? (wait/swim) ")
+        if choice2 == "swim":
+                print("you get attacked by an angry trout. game over.")
+                exit()
+        elif choice2 == "wait":
+                choice3 = input("you arrive at the island unharmed. there is a house with 3 doors. one red, one yellow and one blue. which colour do you choose? (red/yellow/blue) ")
+                if choice3 == "red":
+                        print("it's a room full of fire. game over.")
+                        exit()
+                elif choice3 == "yellow":
+                        print("you found the treasure! you win!")
+                elif choice3 == "blue":
+                        print("you enter a room of beasts. game over.")
+                        exit()
+                else:
+                        print("you chose a door that doesn't exist. game over.")
+                        exit()
+        else:
+                print("invalid input for lake choice. game over.")
+                exit()        
